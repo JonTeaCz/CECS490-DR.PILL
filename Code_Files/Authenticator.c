@@ -5,18 +5,38 @@
 // Description: This file is used to authenticate the user. It will check if the user an authorized user or a customer.
 
 #include "Authenticator.h"
-
 #include <stdio.h>
 #include <string.h>
 
 // Function prototypes
-int verifyFingerprint();
-int verifyFacialRecognition();
-int verifyPinPad();
-int authenticateUser();
-int authenticateCustomer();
+void verifyFingerprint();
+void verifyFacialRecognition();
+void verifyPinPad();
+void authenticateUser();
+void authenticateStaff();
+void authenticateCustomer();
 
-int authenticateUser() {
+void authenticateUser() {
+    int userType;
+    printf("Select user type:\n");
+    printf("1. Staff\n");
+    printf("2. Customer\n");
+    printf("Enter choice: ");
+    scanf("%d", &userType);
+
+    switch (userType) {
+        case 1:
+            authenticateStaff();
+            break;
+        case 2:
+            authenticateCustomer();
+            break;
+        default:
+            printf("Invalid choice.\n");
+            break;
+    }
+}
+void authenticateStaff() {
     int choice;
     printf("Select verification method:\n");
     printf("1. Fingerprint\n");
@@ -27,18 +47,21 @@ int authenticateUser() {
 
     switch (choice) {
         case 1:
-            return verifyFingerprint();
+            verifyFingerprint();
+            break;
         case 2:
-            return verifyFacialRecognition();
+            verifyFacialRecognition();
+            break;
         case 3:
-            return verifyPinPad();
+            verifyPinPad();
+            break;
         default:
             printf("Invalid choice.\n");
-            return 0;
+            break;
     }
 }
 
-int authenticateCustomer() {
+void authenticateCustomer() {
     int choice;
     printf("Select verification method:\n");
     printf("1. Fingerprint\n");
@@ -49,34 +72,34 @@ int authenticateCustomer() {
 
     switch (choice) {
         case 1:
-            return verifyFingerprint();
+            verifyFingerprint();
+            break;
         case 2:
-            return verifyFacialRecognition();
+            verifyFacialRecognition();
+            break;
         case 3:
-            return verifyPinPad();
+            verifyPinPad();
+            break;
         default:
             printf("Invalid choice.\n");
-            return 0;
+            break;
     }
 }
 
-int verifyFingerprint() {
+void verifyFingerprint() {
     // Placeholder for fingerprint verification logic
     printf("Verifying fingerprint...\n");
     // Simulate verification success
-    return 1;
 }
 
-int verifyFacialRecognition() {
+void verifyFacialRecognition() {
     // Placeholder for facial recognition verification logic
     printf("Verifying facial recognition...\n");
     // Simulate verification success
-    return 1;
 }
 
-int verifyPinPad() {
+void verifyPinPad() {
     // Placeholder for pin pad verification logic
     printf("Verifying pin pad...\n");
     // Simulate verification success
-    return 1;
 }
