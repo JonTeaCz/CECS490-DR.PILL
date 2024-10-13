@@ -5,4 +5,13 @@
 // Description: This file contains the functions that control the motors of the dispenser.
 // The functions are used to control the motors in order to dispense the pills efficiently and accurately.
 
+#include <stdint.h>
 #include "motors.h"
+
+void initMotors() {
+    // Initialize motor components
+}
+
+void dispensePills(void) {
+    // Dispense
+}

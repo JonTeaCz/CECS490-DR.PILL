@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "authenticator.h": "c"
+        "authenticator.h": "c",
+        "lcd_screen.h": "c",
+        "stdint.h": "c",
+        "stdio.h": "c"
     }
 }

@@ -5,6 +5,7 @@
 // Description: This file is used to authenticate the user. It will check if the user an authorized user or a customer.
 
 #include "Authenticator.h"
+#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 
