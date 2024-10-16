@@ -8,6 +8,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
 // Function prototypes
 void verifyFingerprint();
@@ -16,6 +17,10 @@ void verifyPinPad();
 void authenticateUser();
 void authenticateStaff();
 void authenticateCustomer();
+
+// Initalize the user struct
+User users[MAX_USERS];
+int userCount = 0;
 
 void authenticateUser() {
     int userType;
@@ -99,8 +104,47 @@ void verifyFacialRecognition() {
     // Simulate verification success
 }
 
+void loadUsers() {
+    FILE *file = fopen("names_and_ids.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return;
+    }
+
+    while (fscanf(file, "%[^,], %[^,], %[^,], %s\n", users[userCount].firstName, users[userCount].lastName, users[userCount].pin, users[userCount].role) == 4) {
+        userCount++;
+        if (userCount >= MAX_USERS) break;
+    }
+
+    fclose(file);
+}
+
 void verifyPinPad() {
-    // Placeholder for pin pad verification logic
-    printf("Verifying pin pad...\n");
-    // Simulate verification success
+    if (userCount == 0) {
+        loadUsers();
+    }
+
+    char inputPin[6];
+    printf("Enter your 5-digit PIN: ");
+    scanf("%5s", inputPin);
+
+    bool authenticated = false;
+    for (int i = 0; i < userCount; i++) {
+        if (strcmp(inputPin, users[i].pin) == 0) {
+            printf("Authentication successful. Welcome, %s %s!\n", users[i].firstName, users[i].lastName);
+            if (strcmp(users[i].role, "staff") == 0) {
+                printf("You are logged in as staff.\n");
+                authenticateStaff();
+            } else {
+                printf("You are logged in as a customer.\n");
+                authenticateCustomer();
+            }
+            authenticated = true;
+            break;
+        }
+    }
+
+    if (!authenticated) {
+        printf("Authentication failed. Invalid PIN.\n");
+    }
 }

@@ -9,8 +9,12 @@
 #include "Interface.h"
 #include "LCD_Screen.h"
 #include "motors.h"
+#include "DR_PILL_flags.h"
 #include <stdint.h>
 #include <stdio.h>
+#include <stdbool.h>
+
+// Intialize variables at the start of the program
 
 int main(void) {
     // Initialize hardware components
@@ -21,16 +25,16 @@ int main(void) {
 
     // Main loop
     while (1) {
-        // Authenticate user
+        // Authenticator.c
         if (()) {
-            // Display interface
+            // Interface.c and LCD_Screen.c
             displayInterface();
             
-            // Wait for user input and dispense pills accordingly
+            // Motors.c
             int pillCount = getPillCountFromUser();
-            dispensePills(pillCount);
+            dispensePills();
         } else {
-            // Display authentication error
+            // Authenticator.c and LCD_Screen.c
             displayAuthError();
         }
     }
