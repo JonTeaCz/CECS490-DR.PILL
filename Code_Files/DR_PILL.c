@@ -18,25 +18,14 @@
 
 int main(void) {
     // Initialize hardware components
-    initLCD();
-    initMotors();
-    initAuthenticator();
-    initInterface();
+    // initLCD();
+    // initMotors();
+    // initAuthenticator();
+    // initInterface();
 
     // Main loop
-    while (1) {
-        // Authenticator.c
-        if (()) {
-            // Interface.c and LCD_Screen.c
-            displayInterface();
-            
-            // Motors.c
-            int pillCount = getPillCountFromUser();
-            dispensePills();
-        } else {
-            // Authenticator.c and LCD_Screen.c
-            displayAuthError();
-        }
+    while (!EXIT_FLAG) {
+
     }
 
     return ("Exiting program...");
