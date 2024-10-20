@@ -22,7 +22,7 @@ void authenticateCustomer();
 User users[MAX_USERS];
 int userCount = 0;
 
-void authenticateUser() {
+void authenticateUser(void) {
     int userType;
     printf("Select user type:\n");
     printf("1. Staff\n");
@@ -42,7 +42,7 @@ void authenticateUser() {
             break;
     }
 }
-void authenticateStaff() {
+void authenticateStaff(void) {
     int choice;
     printf("Select verification method:\n");
     printf("1. Fingerprint\n");
@@ -67,7 +67,7 @@ void authenticateStaff() {
     }
 }
 
-void authenticateCustomer() {
+void authenticateCustomer(void) {
     int choice;
     printf("Select verification method:\n");
     printf("1. Fingerprint\n");
@@ -92,13 +92,13 @@ void authenticateCustomer() {
     }
 }
 
-void verifyFingerprint() {
+void verifyFingerprint(void) {
     // Placeholder for fingerprint verification logic
     printf("Verifying fingerprint...\n");
     // Simulate verification success
 }
 
-void verifyFacialRecognition() {
+void verifyFacialRecognition(void) {
     // Placeholder for facial recognition verification logic
     printf("Verifying facial recognition...\n");
     // Simulate verification success

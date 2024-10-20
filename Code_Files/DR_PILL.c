@@ -17,16 +17,21 @@
 // Intialize variables at the start of the program
 
 int main(void) {
+    authenticateUser();
+
     // Initialize hardware components
-    // initLCD();
-    // initMotors();
-    // initAuthenticator();
-    // initInterface();
+    // LCD();
+    // Motors();
+    // Authenticator();
+    // Interface();
+    
+    // // Main loop
+    // while (!EXIT_FLAG) {
 
-    // Main loop
-    while (!EXIT_FLAG) {
+    // authenticateUser(); // Asks user type -> STAFF or CUSTOMER
 
-    }
+    // }
 
-    return ("Exiting program...");
+    // return ("Exiting program...");
 }
+
