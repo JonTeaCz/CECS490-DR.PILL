@@ -17,21 +17,27 @@
 // Intialize variables at the start of the program
 
 int main(void) {
-    authenticateUser();
-
     // Initialize hardware components
-    // LCD();
-    // Motors();
-    // Authenticator();
-    // Interface();
-    
-    // // Main loop
-    // while (!EXIT_FLAG) {
+    initLCD();
+    initMotors();
+    initAuthenticator();
+    initInterface();
 
-    // authenticateUser(); // Asks user type -> STAFF or CUSTOMER
+    // Main loop
+    while (1) {
+        // Authenticator.c
+        if (()) {
+            // Interface.c and LCD_Screen.c
+            displayInterface();
+            
+            // Motors.c
+            int pillCount = getPillCountFromUser();
+            dispensePills();
+        } else {
+            // Authenticator.c and LCD_Screen.c
+            displayAuthError();
+        }
+    }
 
-    // }
-
-    // return ("Exiting program...");
+    return ("Exiting program...");
 }
-
