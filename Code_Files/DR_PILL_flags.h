@@ -9,7 +9,7 @@
 #include <stdbool.h>
 
 // ==================== General Flags ====================
-bool AUTHENTICATED = false;              // General authentication flag
+
 
 // ==================== Customer Flags ====================
 bool CUSTOMER_FLAG = false;              // Flag for customer authentication
@@ -22,22 +22,6 @@ bool CUSTOMER_AUTHENTICATE_EXIT = false;    // Flag for customer exit from authe
 bool CUSTOMER_AUTHENTICATE_RETRY = false;   // Flag for customer retry of authentication
 bool CUSTOMER_AUTHENTICATE_SUCCESSFUL = false; // Flag for successful customer authentication
 bool CUSTOMER_AUTHENTICATE_FAILED = false;  // Flag for failed customer authentication
-
-
-// ==================== Verification Flags ====================
-bool FINGERPRINT_FLAG = false;          // Flag for fingerprint verification
-bool FACIAL_RECOGNITION_FLAG = false;   // Flag for facial recognition verification
-bool PINPAD_FLAG = false;               // Flag for pin pad verification
-bool PINPAD_SUCCESS = false;            // Flag for successful pin pad verification
-bool FINGERPRINT_SUCCESS = false;       // Flag for successful fingerprint verification
-bool FACIAL_RECOGNITION_SUCCESS = false; // Flag for successful facial recognition verification
-
-bool DISPENSE_FLAG = false;             // Flag for customer ready to dispense
-bool DISPENSE_COMPLETE = false;         // Flag for complete dispensing
-bool DISPENSE_ERROR = false;            // Flag for dispensing error
-bool DISPENSE_SUCCESS = false;          // Flag for successful dispensing
-bool EXIT_FLAG = false;                 // Flag for customer exit
-bool ERROR_FLAG = false;                // Flag for general error
 
 // ==================== Staff Flags ====================
 bool STAFF_FLAG = false;                // Flag for staff authentication
@@ -64,3 +48,19 @@ bool STAFF_DISPENSE_ERROR = false;      // Flag for staff dispensing error
 bool STAFF_DISPENSE_SUCCESS = false;    // Flag for successful staff dispensing
 bool STAFF_EXIT_FLAG = false;           // Flag for staff exit
 bool STAFF_ERROR_FLAG = false;          // Flag for general staff error
+
+
+// ==================== System Flags ====================
+bool FINGERPRINT_FLAG = false;          // Flag for fingerprint verification
+bool FACIAL_RECOGNITION_FLAG = false;   // Flag for facial recognition verification
+bool PINPAD_FLAG = false;               // Flag for pin pad verification
+bool PINPAD_SUCCESS = false;            // Flag for successful pin pad verification
+bool FINGERPRINT_SUCCESS = false;       // Flag for successful fingerprint verification
+bool FACIAL_RECOGNITION_SUCCESS = false; // Flag for successful facial recognition verification
+
+bool DISPENSE_FLAG = false;             // Flag for customer ready to dispense
+bool DISPENSE_COMPLETE = false;         // Flag for complete dispensing
+bool DISPENSE_ERROR = false;            // Flag for dispensing error
+bool DISPENSE_SUCCESS = false;          // Flag for successful dispensing
+bool EXIT_FLAG = false;                 // Flag for customer exit
+bool ERROR_FLAG = false;                // Flag for general error
