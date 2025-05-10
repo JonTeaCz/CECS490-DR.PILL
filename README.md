@@ -184,7 +184,7 @@
 
 ## References
 
-See [Documentation.md](./Documentation.md) and [Final Report (PDF)](./CECS490B-Final-Report-Group.pdf) for full bibliography and technical appendices.
+See [Documentation.md](Documentation/Documentation.md) and [Final Report (PDF)](Progress/Progress_Reports/CECS490B_Final_Report_Group.pdf) for full bibliography and technical appendices.
 
 ---
 
