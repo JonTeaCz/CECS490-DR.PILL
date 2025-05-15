@@ -48,7 +48,7 @@
 
 | Name                  | Email                                      |
 |-----------------------|--------------------------------------------|
-| Jonathan Cerniaz      | Jonathan.Cerniaz01@student.csulb.edu       |
+| Jonathan Cerniaz      | jonathan.cerniaz@gmail.com                 |
 | Jehmel Espiritu       | Jehmel.Espiritu01@student.csulb.edu        |
 | Jeremy Espiritu       | Jeremy.Espiritu01@student.csulb.edu        |
 | Joseph Guzman         | joseph.guzman@student.csulb.edu            |
@@ -59,7 +59,7 @@
 
 ## Roles & Responsibilities
 
-- **Jonathan Cerniaz:** Circuitry, team management, touchscreen, enclosure, power, conveyor, storage.
+- **Jonathan Cerniaz:** Circuitry, team management, touchscreen, enclosure, power, conveyor, storage, facial and fingerprint recognition.
 - **Joseph Guzman:** Enclosure, GitHub, 3D design/build, motor testing, dispensing, board communication, conveyor.
 - **Jehmel Espiritu:** User interface implementation, display menu programming.
 - **Jeremy Espiritu:** Pill tracking/dispensing, screen display, dispense history.
@@ -84,8 +84,9 @@
 - Raspberry Pi 5 (CPU)
 - STM32 Microcontroller
 - Stepper and Servo Motors
-- 7" Touchscreen
+- 7" Touchscreen LCD
 - Biometric sensors (fingerprint, facial recognition)
+- Pixy2 Object Recognition
 - MySQL database
 - Secure enclosure
 
